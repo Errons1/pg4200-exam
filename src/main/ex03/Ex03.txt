@@ -1,0 +1,29 @@
+<ArrayList = O(n)
+ HashMap = O(1)
+ ArrayList’s performance will very quickly increase linear with n.
+ While it is important to note that what we search for can be the first resulting in Ω (1) but also worst case is O(n)
+ making array have an average n/2.
+ HashMap has O(1) as worst and Ω (1) making it have a Big Θ Tight Bound performance of Θ(1).
+ But the downside of using HashMap is that it takes more place in memory compared to ArrayList.
+ One other big note is that HashMap can store to much and overload its “buckets” for storage resulting in lower performance.
+ That is the reason why in searches like this we go for HashMap’s very good ability to scale up and still be very fast.
+
+ In my code I have aimed for going for depth-first Search in short terms means it goes out as long it can in one direction and hope it reaches the target.
+ It remembers all the vertexes it been though. Meaning it will make fewer list and don’t always find the quickest route.
+ But on performance it is much easier on memory and CPU. For the other search one can do is Breadth-First Search (BFS).
+ That is a search who is searching for all the possible routes. It scales bad.
+ Both algorithms have time complexity of O(V+E) V = vertices and E = edges. But the nature of the BFS makes It slow.
+ Since it goes through all the closes neighbors, then second layer, then third layer etc.
+
+ In the example given from task where we want to go from node 6 to nide 9, what would the performance be.
+ BFS would most likely be the quickest from its nature.
+ It goes from layer one neighbors to layer 2 two and so on. Here the performance would go more on the number of connected vertexes.
+ DFS have a very small chance of winning this.
+ Mainly because its nature is to branch out as long it can in one direction till it finds it target. Since that is the case,
+ it can be lucky striking a three-node route or a be unlucky and gain a six-node long route.
+ We could turn it around and say we need to go from node 9 to node 1.
+ BFS need to check year layer and all ways meaning it would go through 4 layers checking every connection
+ to see if it finds its end.
+ While DFS have a very high chance of stumbling across the wished node and do an uncounted guess
+ of half the searches BFS needs to.
+
